@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>W02: Task3</title>
+  </head>
+  <body>
+    <label for="x0">x0:</label>
+    <input type="number" value="0" id="x0">
+    <label for="y0">y0:</label>
+    <input type="number" value="0" id="y0">
+    <label for="z0">z0:</label>
+    <input type="number" value="0" id="z0">
+    <label for="x1">x1:</label>
+    <input type="number" value="0" id="x1">
+    <label for="y1">y1:</label>
+    <input type="number" value="0" id="y1">
+    <label for="z1">z1:</label>
+    <input type="number" value="0" id="z1">
+    <label for="x2">x2:</label>
+    <input type="number" value="0" id="x2">
+    <label for="y2">y2:</label>
+    <input type="number" value="0" id="y2">
+    <label for="z2">z2:</label>
+    <input type="number" value="0" id="z2">
+    <label for="answer">answer:</label>
+    <input type="number" value="" id="answer">
+    <input type="button" onclick="Calculate()" value="calculate">
+    <script src="vec3.js" type="text/javascript"></script>
+    <script>
+      function AreaOfTriangle(v0, v1, v2) {
+          v1.x = v1.x - v0.x;
+          v1.y = v1.y - v0.y;
+          v1.z = v1.z - v0.z;
+          v2.x = v2.x - v0.x;
+          v2.y = v2.y - v0.y;
+          v2.z = v2.z - v0.z;
+          return Math.sqrt((Math.pow((v1.y*v2.z - v1.z*v2.y),2)) + Math.pow((v1.z*v2.x - v1.x*v2.z),2) + Math.pow((v1.x*v2.y - v1.y*v2.x),2))/2;
+      }
+      function Calculate() {
+        var x0, y0, z0; // (input vertex 0)
+        var x1, y1, z1; // (input vertex 1)
+        var x2, y2, z2; // (input vertex 2)
+        var v0 = new Vec3(x0, y0, z0);
+        var v1 = new Vec3(x1, y1, z1);
+        var v2 = new Vec3(x2, y2, z2);
+        v0.x = document.getElementById("x0").value, v0.y = document.getElementById("y0").value, v0.z = document.getElementById("z0").value;
+        v1.x = document.getElementById("x1").value, v1.y = document.getElementById("y1").value, v1.z = document.getElementById("z1").value;
+        v2.x = document.getElementById("x2").value, v2.y = document.getElementById("y2").value, v2.z = document.getElementById("z2").value;
+        var S = AreaOfTriangle(v0, v1, v2); // (output value)
+        document.getElementById("answer").value = S;
+      }
+    </script>
+  </body>
+</html>
