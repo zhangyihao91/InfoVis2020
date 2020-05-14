@@ -30,6 +30,6 @@ class Vec3 {
 
   // Mid method
   mid() {
-    return this.x + this.y + this.z - min(this.x, this.y, this.z) - max(this.x, this.y, this.z);
+    return this.x + this.y + this.z - Math.min(this.x, this.y, this.z) - Math.max(this.x, this.y, this.z);
   }
 }
