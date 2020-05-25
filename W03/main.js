@@ -1,4 +1,3 @@
-
 function main()
 {
     var width = 500;
@@ -33,5 +32,3 @@ function main()
         renderer.render( scene, camera );
     }
 }
-main.js
-当前显示main.js。
