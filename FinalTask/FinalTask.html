@@ -1,0 +1,98 @@
+<html>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <head>
+	<title>Final Task</title>
+
+	<link rel="stylesheet" type="text/css" href="style2.css" />
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="jquery-ui.css">
+	<script src="modernizr.custom.63321.js"></script>
+    </head>
+
+    <body style="margin:40px">
+			<h1>Final Task　　</h1>
+			まず私は使っている方法を紹介していきたいと思います。<br>
+			<br>
+			LobsterDataを使ってMaterial、Color、Isovalue三つのタイプを組み合わせて<br>
+			ユーザーインターフェースを構成しました。<br>
+			さらに、Material、Colorはそれぞれ三つのタイプを選択可能です。<br>
+
+			
+    <div  id="container1">
+    	<div id="container2">
+	  	
+	  	<div id="col2" >
+
+			<ul class="tabs" style="height:100%">
+		    <li>
+		        <input type="radio" name="tabs" id="tab1" checked />
+		        <label for="tab1">Isovalue</label>
+		        <div id="tab-content1" class="tab-content">
+					
+								 
+					<legend>Material:</legend>
+					可視化に使用する反射モデルの設定。MeshBasicMaterial、MeshLambertMaterial、MeshPhongMaterialを選択することができる。<br />
+					  <div class="fleft">
+					  <form action="" id="form">
+						<select id="cd-dropdown" class="cd-select" name="first">
+							<option value="1" >MeshBasicMaterial</option>
+							<option value="2" >MeshLambertMaterial</option>
+							<option value="3" selected>MeshPhongMaterial</option>
+
+						</select>
+					</form>
+					 </div>
+			
+					 <span>Isovalue：</span>
+					サーフェスレンダリングのしきい値の設定．<br />
+					値が大きいと見える部分が多くなるが、ノイズも増えている。<br />
+					<input type="text" name="isovalue" id="iso" min="0" max="254" value="100">
+					
+					<input type="button" class="btn bon-default" " value="Apply" onclick="calculate()">
+					<br /><hr />
+
+					 <legend>Color transfer:</legend>
+					 カラーマップの中で色をつぎの三つのタイプに変換することができる。<br />
+					 <div class="fleft">
+					   <select id="cd-dropdown2" class="cd-select">
+						   <option value="1" selected>Rainbow-color</option>
+						   <option value="2" >White-red</option>
+						   <option value="3" >Dark-brown</option>
+
+					   </select>
+					</div>
+					
+			    </div>
+	        </li>
+
+		    
+			
+		</ul>
+      </div>
+      <div style="width:80%;float:right;" id="target">
+
+	  	</div>
+	  	</div>
+	 </div>
+	<div style="position: absolute;right: 0;top: 0;font-size: 25px;">張毅豪 201x125x</div>
+	<script src="Bounds.js"></script>
+	<script src="three.min.js"></script>
+	<script src="https://threejs.org/examples/js/math/Lut.js"></script>
+	<script src="TrackballControls.js"></script>
+	<script src="https://naohisas.github.io/KVS.js/Build/KVS.min.js"></script>
+	<script src="https://naohisas.github.io/KVS.js/Build/KVS2THREE.min.js"></script>
+	<script src="KVSLobsterData.js"></script>
+	<script src="IsotropicTurbulenceData.js"></script>
+	<script src="KVSSingleCubeData.js"></script>
+	<script src="jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.dropdown.js"></script>
+		<script type="text/javascript" src="slice_three.js"></script>
+	<script src="Isosurfaces.js"></script>
+	<script src="SlicePlane.js"></script>
+	<script src="main.js"></script>
+
+	<script>
+	 main();
+	</script>
+    </body>
+</html>
