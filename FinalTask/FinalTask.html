@@ -11,11 +11,11 @@
 
     <body style="margin:40px">
 			<h1>Final Task　　</h1>
-			まず私は使っている方法を紹介していきたいと思います。<br>
+			First, I would like to introduce the way I use it<br>
 			<br>
-			LobsterDataを使ってMaterial、Color、Isovalue三つのタイプを組み合わせて<br>
-			ユーザーインターフェースを構成しました。<br>
-			さらに、Material、Colorはそれぞれ三つのタイプを選択可能です。<br>
+			Combining three types of material, color, and isovalue using lobsterdata<br>
+			User interface configured.<br>
+			In addition, material or color can select three types.<br>
 
 			
     <div  id="container1">
@@ -31,28 +31,28 @@
 					
 								 
 					<legend>Material:</legend>
-					可視化に使用する反射モデルの設定。MeshBasicMaterial、MeshLambertMaterial、MeshPhongMaterialを選択することができる。<br />
+					Setting the reflection model used for visualization.You can select mesbasicmaterial, meslambertmaterial and mespongmaterial<br />
 					  <div class="fleft">
 					  <form action="" id="form">
 						<select id="cd-dropdown" class="cd-select" name="first">
 							<option value="1" >MeshBasicMaterial</option>
 							<option value="2" >MeshLambertMaterial</option>
 							<option value="3" selected>MeshPhongMaterial</option>
-
+。
 						</select>
 					</form>
 					 </div>
 			
 					 <span>Isovalue：</span>
-					サーフェスレンダリングのしきい値の設定．<br />
-					値が大きいと見える部分が多くなるが、ノイズも増えている。<br />
+					Threshold of surface rendering．<br />
+					Although the number of portions is large, the noise is increasing.<br />
 					<input type="text" name="isovalue" id="iso" min="0" max="254" value="100">
 					
 					<input type="button" class="btn bon-default" " value="Apply" onclick="calculate()">
 					<br /><hr />
 
 					 <legend>Color transfer:</legend>
-					 カラーマップの中で色をつぎの三つのタイプに変換することができる。<br />
+					 The color can be converted into three types in the color map.<br />
 					 <div class="fleft">
 					   <select id="cd-dropdown2" class="cd-select">
 						   <option value="1" selected>Rainbow-color</option>
