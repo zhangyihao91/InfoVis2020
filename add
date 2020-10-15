@@ -94,11 +94,11 @@ Hence, key questions and goals like the data acquisition, service architecture, 
 
 \subsection{Dataset}
 
-For this Global Road Damage Detection challenge, we use the dataset which was provided by organizers and we split it by a ratio as 0.15 into two parts to training our model. One is the training dataset which include 18123 images and the other is validation dataset including 3156 images. All the images was collected from three countries which was Japen, India, Czech. In most of the images, there were several different ground truth boxs which was labeled with the road damage classes. In the following part we will show the precision and recall of each class and country seperately.   
+For this Global Road Damage Detection challenge, we use the dataset which was provided by organizers and split it by a ratio as 0.15 into two parts to training our model. One is the training dataset which include 18123 images and the other is validation dataset including 3156 images. All the images was collected from three countries which was Japen, India, Czech. In most of the images, there were several different ground truth boxs which have been labeled with the road damage classes. In the following part we will show the precision and recall of each class and country seperately.   
 
 \subsection{Proposed method}
 
-In the first section of our task, we used the FasterRCNN as our model to r 
+In the first section of our task, we used the FasterRCNN as our model to detect the image dataset. During the process of training we tried several different methods to improve our F-1 scores such as Label Smoothing, Pretraining Models, Bigger Models.In the next part we will show our results of different methods seperately.
 - Show the results for different input image size: 400, 600, 800, 1000
 - Show the results for different backbones: Resnet18,50,101,152. Bigger models improve accuracy.
 - Show the results for label smoothing.
